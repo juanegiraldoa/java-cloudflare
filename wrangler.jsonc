@@ -1,0 +1,27 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "java-cloudflare",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-07-26",
+	"compatibility_flags": ["nodejs_compat"],
+	"observability": {
+		"enabled": true,
+	},
+	"containers": [
+		{
+			"class_name": "JavaContainer",
+			"image": "./Dockerfile",
+			"max_instances": 1,
+			"name": "api-java",
+		},
+	],
+	"durable_objects": {
+		"bindings": [{ "class_name": "JavaContainer", "name": "CONTAINER" }],
+	},
+	"migrations": [
+		{
+			"new_sqlite_classes": ["JavaContainer"],
+			"tag": "v1",
+		},
+	],
+}
