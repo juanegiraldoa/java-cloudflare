@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AppController {
 	@GetMapping
 	public ResponseEntity<String> status() {
+		System.out.println("test logs");
 		return ResponseEntity.ok("OK");
 	}
 }
