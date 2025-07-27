@@ -11,6 +11,9 @@ importers:
       '@cloudflare/containers':
         specifier: ^0.0.25
         version: 0.0.25
+      hono:
+        specifier: ^4.8.9
+        version: 4.8.9
     devDependencies:
       '@types/node':
         specifier: ^24.1.0
@@ -421,6 +424,10 @@ packages:
   glob-to-regexp@0.4.1:
     resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
 
+  hono@4.8.9:
+    resolution: {integrity: sha512-ERIxkXMRhUxGV7nS/Af52+j2KL60B1eg+k6cPtgzrGughS+espS9KQ7QO0SMnevtmRlBfAcN0mf1jKtO6j/doA==}
+    engines: {node: '>=16.9.0'}
+
   is-arrayish@0.3.2:
     resolution: {integrity: sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==}
 
@@ -807,6 +814,8 @@ snapshots:
     optional: true
 
   glob-to-regexp@0.4.1: {}
+
+  hono@4.8.9: {}
 
   is-arrayish@0.3.2: {}
 
