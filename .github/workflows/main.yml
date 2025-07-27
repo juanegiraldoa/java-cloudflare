@@ -19,11 +19,9 @@ jobs:
           version: 10
         
       - name: Install dependencies
-        working-directory: app
         run: pnpm install
         
       - name: Deploy on Cloudflare
-        working-directory: app
         run: pnpm run deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
