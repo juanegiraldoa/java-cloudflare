@@ -10,7 +10,7 @@ const app = new Hono<{
 	Bindings: { CONTAINER: DurableObjectNamespace<JavaContainer> };
 }>();
 
-app.all('/', async (c) => {
+app.all('/*', async (c) => {
 	const container = getContainer(c.env.CONTAINER);
 	return await container.fetch(c.req.raw);
 });
